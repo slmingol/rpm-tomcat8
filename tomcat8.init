@@ -158,7 +158,6 @@ function stop() {
          count="0"
          if [ -f "${CATALINA_PID}" ]; then
             read kpid < ${CATALINA_PID}
-            rm -fr ${CATALINA_PID}
             until [ "$(ps --pid $kpid | grep -c $kpid)" -eq "0" ] || \
                       [ "$count" -gt "$SHUTDOWN_WAIT" ]; do
                     if [ "$SHUTDOWN_VERBOSE" = "true" ]; then
@@ -177,6 +176,9 @@ function stop() {
             fi
             rm -f /var/lock/subsys/${NAME} ${CATALINA_PID}
         else
+            if [ -f "${CATALINA_PID}" ]; then
+              rm -f ${CATALINA_PID}
+            fi
             log_failure_msg
             RETVAL="4"
         fi

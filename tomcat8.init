@@ -2,7 +2,7 @@
 #
 # tomcat8      This shell script takes care of starting and stopping Tomcat
 #
-# chkconfig: - 80 20
+# chkconfig: 345 80 20
 #
 ### BEGIN INIT INFO
 # Provides: tomcat8

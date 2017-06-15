@@ -18,9 +18,9 @@
 
 Summary:    Apache Servlet/JSP Engine, RI for Servlet 3.1/JSP 2.3 API
 Name:       tomcat8
-Version:    8.0.24
+Version:    8.0.36
 BuildArch:  noarch
-Release:    1
+Release:    2
 License:    Apache Software License
 Group:      Networking/Daemons
 URL:        http://tomcat.apache.org/
@@ -160,7 +160,5 @@ if [ $1 -ge 1 ]; then
 fi
 
 %changelog
-* Thu Sep 4 2014 Edward Bartholomew <edward@bartholomew>
-- 7.0.55
-* Mon Jul 1 2013 Nathan Milford <nathan@milford.io>
-- 7.0.41
+* Wed Jun 14 2017 Sam Mingoelli <github at jake8us.org> - 8.0.36-2
+- Adds redhat-lsb-core as dependency, updates to 8.0.36
